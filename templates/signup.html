@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Sign Up</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div style="margin-bottom: 15px;">
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="{{ form.password1.id_for_label }}">Password:</label>
+            {{ form.password1 }}
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+            {{ form.password2 }}
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+{% endblock %}

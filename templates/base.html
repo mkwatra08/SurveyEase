@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>SurveyEase {% block title %}{% endblock %}</title>
+    <style>
+        body {
+            background-color: #faf3e0; /* Light beige */
+            color: #6d4c41; /* Warm brown */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #ffab91; /* Light coral */
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar:hover {
+            background-color: #ff8a65; /* Slightly darker coral */
+        }
+		.container{
+			max-width: 100%;
+		}
+        .card {
+            background-color: #fff9c4; /* Light pastel yellow */
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            background-color: #ffd54f; /* Light pastel yellow */
+            color: #6d4c41; /* Warm brown */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffca28; /* Slightly darker yellow */
+            color: #5d4037; /* Darker brown */
+        }
+
+        .form-container {
+            max-width: 500px; /* Increased width */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff9c4; /* Light pastel yellow */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            color: #ff7043; /* Warm coral */
+        }
+
+        .form-container label {
+            color: #8d6e63; /* Soft brown */
+        }
+
+        .form-container input {
+            background-color: #fce4ec; /* Light pink */
+            border: 1px solid #ffd54f; /* Light pastel yellow */
+            color: #6d4c41; /* Warm brown */
+        }
+
+        .form-container button {
+            background-color: #ff7043; /* Warm coral */
+            color: #faf3e0; /* Light beige */
+        }
+
+        .form-container button:hover {
+            background-color: #f4511e; /* Slightly darker coral */
+        }
+    </style>
+</head>
+
+<body>
+    <!--NavBar-->
+    {% include 'partials/_navbar.html' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 m-auto">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
